@@ -17,11 +17,31 @@ public class NameToHeight {
 	 * and output the results. Be sure to handle the case where the map does not
 	 * contain a specified name.
 	 */
+	
+	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
-		// FIXME
-		throw new NotYetImplementedException();
-
+		Map<String, Integer> heights = new HashMap<>();
+		heights.put("Jacob",73);
+		heights.put("Ryan", 73);
+		heights.put("Arya", 72);
+		heights.put("Andrew", 65);
+		
+		String input = "";
+		while(!input.equals("Quit")) {
+			System.out.println("whose height do you want to know");
+			input = in.next();
+			if(input.equals("Quit")) {
+				
+			}
+			else if(heights.get(input) == null) {
+				System.out.println("Name does not exist");
+			}
+			else {
+				System.out.println(input + "'s height is " + heights.get(input));
+			}
+		}
+				
 	}
 }
